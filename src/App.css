@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.header {
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.header p {
+  color: #bdbdbd;
+  font-size: 16px;
+}
+
+.card-container {
+  width: min(1100px, 90%);
+  margin: 20px auto 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  padding: 18px;
+  text-align: center;
+  background: #0d0d0d;
+
+  border: 3px solid transparent;
+  border-radius: 10px;
+
+  background-image:
+    linear-gradient(#0d0d0d, #0d0d0d),
+    linear-gradient(
+      135deg,
+      #ff0080,
+      #00aaff,
+      #ff4500
+    );
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  transition: border-color 0.2s ease;
+}
+
+.card-image {
+  width: 150px;
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.card p {
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+/* -----------------------------
+   HOVER BORDER COLORS
+------------------------------ */
+
+.card:nth-child(1):hover {
+  border-color: #ff0000;
+}
+
+.card:nth-child(2):hover {
+  border-color: #00aaff;
+}
+
+.card:nth-child(3):hover {
+  border-color: #ff00aa;
+}
+
+.card:nth-child(4):hover {
+  border-color: #00ff66;
+}
+
+.card:nth-child(5):hover {
+  border-color: #ffff00;
+}
+
+.card:nth-child(6):hover {
+  border-color: #00ffff;
+}
+
+.card:nth-child(7):hover {
+  border-color: #ff6600;
+}
+
+.card:nth-child(8):hover {
+  border-color: #9900ff;
+}
+
+.card:nth-child(9):hover {
+  border-color: #00ff88;
+}
+
+.card:nth-child(10):hover {
+  border-color: #ff0080;
+}
+
+.card:nth-child(11):hover {
+  border-color: #ffd000;
+}
+
+.card:nth-child(12):hover {
+  border-color: #0088ff;
+}
+
+/* -----------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
